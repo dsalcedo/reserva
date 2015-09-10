@@ -11,6 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Sitio
+Route::group(['prefix' => '/'], function () {
+	Route::get('/', function () {
+	    return view('welcome');
+	});
+});
+
+// API
+Route::group(['prefix' => '/api'], function () {
+	Route::get('/', function () {
+	    return view('welcome');
+	});
+});
+
+// Super Admin hotel manager 
+Route::group(['prefix' => '/manager'], function () {
+	Route::get('/', function () {
+	    return view('welcome');
+	});
+});
+
+// Hotel Manage
+Route::group(['prefix' => '/hotel'], function () {
+	Route::get('/', function () {
+	    return view('welcome');
+	});
 });
