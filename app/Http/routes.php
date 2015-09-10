@@ -13,16 +13,12 @@
 
 // Sitio
 Route::group(['prefix' => '/'], function () {
-	Route::get('/', function () {
-	    return view('welcome');
-	});
+	Route::get('/', [ 'as' => 'sitio.index', 'uses'=>'Sitio@index' ]);
 });
 
 // API
 Route::group(['prefix' => '/api'], function () {
-	Route::get('/', function () {
-	    return view('welcome');
-	});
+	Route::get('/', [ 'as' => 'api.index', 'uses'=>'ApiV1@index' ]);
 });
 
 // Super Admin hotel manager 
