@@ -13,22 +13,22 @@
 
 // Sitio
 Route::group(['prefix' => '/'], function () {
-	Route::get('/', [ 'as' => 'sitio.index', 'uses'=>'Sitio@index' ]);
+	Route::get('/', [ 'as'=>'sitio.index', 'uses'=>'Sitio@index' ]);
 });
 
-// API
+// API V1
 Route::group(['prefix' => '/api'], function () {
 	Route::get('/', [ 'as' => 'api.index', 'uses'=>'ApiV1@index' ]);
 });
 
-// Super Admin hotel manager 
+// Manager 
 Route::group(['prefix' => '/manager'], function () {
 	Route::get('/', function () {
 	    return view('welcome');
 	});
 });
 
-// Hotel Manage
+// Hotel Manager
 Route::group(['prefix' => '/hotel'], function () {
 	Route::get('/', function () {
 	    return view('welcome');
