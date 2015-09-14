@@ -1,1 +1,6 @@
 https://github.com/ritey/Mailgun
+
+CONEKTA
+La llave --pública-- es utilizada para poder identificar tu cuenta con Conekta. Esta llave, como lo dice su nombre, es completamente pública y la podrás utilizar en el código de front-end (como HTML) o dentro de tu aplicación móvil. Con la llave pública solo podrás hacer llamadas básicas como generar un token a partir de una tarjeta de crédito, débito o AMEX.
+
+La llave --privada-- debes mantenerla privada dentro de tus servidores y no debes compartirla con nadie. Con la llave privada, podrás realizar las peticiones de cargo, creación de clientes, cargos en demanda, suscripciones, agregar tarjetas y cualquier solicitud que API sea capaz de resolver. (Puedes encontrar la documentación sobre las peticiones que puedes hacer al API en la siguiente url: conekta.io/es/docs/api).

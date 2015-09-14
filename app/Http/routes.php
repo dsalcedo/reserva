@@ -14,6 +14,8 @@
 // Sitio
 Route::group(['prefix' => '/'], function () {
 	Route::get('/', [ 'as'=>'sitio.index', 'uses'=>'Sitio@index' ]);
+	Route::get('/registro', [ 'as'=>'sitio.registro', 'uses'=>'Sitio@index' ]);
+	Route::get('/acceso', [ 'as'=>'sitio.acceso', 'uses'=>'Sitio@index' ]);
 });
 
 // API V1
@@ -31,6 +33,12 @@ Route::group(['prefix' => '/manager'], function () {
 // Hotel Manager
 Route::group(['prefix' => '/hotel'], function () {
 	Route::get('/', function () {
-	    return view('welcome');
+	    //return view('welcome');
 	});
+});
+
+Route::get('test',function ()
+{
+	
+	dd(getenv('CONEKTA_SANDBOX_LLAVE_PRIVADA'));
 });
